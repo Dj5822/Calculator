@@ -1,10 +1,11 @@
 import React from 'react';
+import Numpad from './Numpad.js';
 
 class Calculator extends React.Component {
   render(){
     return (
       <div>
-        <p>test</p>
+        <Numpad />
       </div>
     );
   }
