@@ -1,9 +1,10 @@
 import React from 'react';
+import '../Style/style.css';
 
-class NumPad extends React.Component {
+class KeyPad extends React.Component {
   render(){
     return (
-      <div>
+      <div id="keypad">
         <button id="zero">0</button>
         <button id="one">1</button>
         <button id="two">2</button>
@@ -19,4 +20,4 @@ class NumPad extends React.Component {
   }
 }
 
-export default NumPad;
+export default KeyPad;

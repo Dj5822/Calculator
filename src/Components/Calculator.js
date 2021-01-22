@@ -1,12 +1,12 @@
 import React from 'react';
-import Numpad from './Numpad.js';
+import Keypad from './Keypad.js';
 
 class Calculator extends React.Component {
   render(){
     return (
       <div>
         <div id="display"></div>
-        <Numpad />
+        <Keypad />
         <button id="add">+</button>
         <button id="subtrack">-</button>
         <button id="multiple">*</button>
