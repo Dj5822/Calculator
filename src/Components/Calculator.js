@@ -7,13 +7,6 @@ class Calculator extends React.Component {
       <div>
         <div id="display"></div>
         <Keypad />
-        <button id="add">+</button>
-        <button id="subtrack">-</button>
-        <button id="multiple">*</button>
-        <button id="divide">/</button>
-        <button id="equals">=</button>
-        <button id="decimal">.</button>
-        <button id="clear">C</button>
       </div>
     );
   }

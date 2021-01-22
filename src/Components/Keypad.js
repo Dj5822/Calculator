@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Style/style.css';
 
 class KeyPad extends React.Component {
   render(){
@@ -15,6 +14,13 @@ class KeyPad extends React.Component {
         <button id="seven">7</button>
         <button id="eight">8</button>
         <button id="nine">9</button>
+        <button id="add">+</button>
+        <button id="subtrack">-</button>
+        <button id="multiple">*</button>
+        <button id="divide">/</button>
+        <button id="equals">=</button>
+        <button id="decimal">.</button>
+        <button id="clear">C</button>
       </div>
     );
   }
