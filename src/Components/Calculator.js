@@ -10,17 +10,27 @@ class Calculator extends React.Component {
       value: "0"
     }
     this.keypadPressed = this.keypadPressed.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   keypadPressed(value) {
-    this.setState({value: value});
+    if ("0" === this.state.value) {
+        this.setState({value: value.toString()});
+    }
+    else {
+      this.setState(state => ({value: state.value + value.toString()}));
+    }
+  }
+
+  clear() {
+    this.setState({value: "0"});
   }
 
   render(){
     return (
       <div>
         <Display value={this.state.value} />
-        <Keypad onNumPress={this.keypadPressed} />
+        <Keypad onNumPress={this.keypadPressed} onClear={this.clear}/>
       </div>
     );
   }
