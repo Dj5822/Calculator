@@ -2,6 +2,8 @@ import React from 'react';
 import Display from './Display.js';
 import Keypad from './Keypad.js';
 
+const OPERATORS = new Set("+-*/");
+
 class Calculator extends React.Component {
 
   constructor(props) {
@@ -14,6 +16,13 @@ class Calculator extends React.Component {
   }
 
   keypadPressed(value) {
+    if (OPERATORS.has(value)) {
+      let location = this.state.value.length-1;
+      if (OPERATORS.has(this.state.value.slice(location))){
+        this.setState(state => ({value: state.value.slice(0, location)}));
+      }
+    }
+
     if ("0" === this.state.value) {
         this.setState({value: value.toString()});
     }
