@@ -16,15 +16,28 @@ class Calculator extends React.Component {
   }
 
   keypadPressed(value) {
+    // Location of the previous character.
+    let location = this.state.value.length-1;
+
+    // Removes previous operator when consecutive operators are entered.
     if (OPERATORS.has(value)) {
-      let location = this.state.value.length-1;
       if (OPERATORS.has(this.state.value.slice(location))){
         this.setState(state => ({value: state.value.slice(0, location)}));
       }
     }
 
-    if ("0" === this.state.value) {
-        this.setState({value: value.toString()});
+    // Removes consecutive zeros after an operator.
+    if ("0" === value) {
+      if ("0" === this.state.value[location]) {
+        if (OPERATORS.has(this.state.value[location-1])) {
+          this.setState(state => ({value: state.value.slice(0, location)}));
+        }
+      }
+    }
+
+    // Removes the first zero when something other than . is entered.
+    if ("0" === this.state.value && "." !== value) {
+      this.setState({value: value.toString()});
     }
     else {
       this.setState(state => ({value: state.value + value.toString()}));
