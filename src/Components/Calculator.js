@@ -6,7 +6,7 @@ class Calculator extends React.Component {
   render(){
     return (
       <div>
-        <Display id="display" />
+        <Display />
         <Keypad />
       </div>
     );

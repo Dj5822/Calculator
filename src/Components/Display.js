@@ -1,9 +1,10 @@
 import React from 'react';
+import '../Style/Display.css';
 
 class Display extends React.Component {
   render() {
     return (
-      <div>
+      <div id="display">
         Display
       </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Style/style.css';
+import '../Style/Keypad.css';
 
 class KeyPad extends React.Component {
   render(){
