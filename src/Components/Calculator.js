@@ -35,6 +35,13 @@ class Calculator extends React.Component {
       }
     }
 
+    // Removes consecutive decimal point.
+    if ("." === value) {
+      if ("." === this.state.value[location]) {
+        this.setState(state => ({value: state.value.slice(0, location)}));
+      }
+    }
+
     // Removes the first zero when something other than . is entered.
     if ("0" === this.state.value && "." !== value) {
       this.setState({value: value.toString()});
