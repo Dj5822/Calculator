@@ -13,7 +13,7 @@ class Keypad extends React.Component {
         <button onClick={this.keyPressed("7")} id="seven">7</button>
         <button onClick={this.keyPressed("8")} id="eight">8</button>
         <button onClick={this.keyPressed("9")} id="nine">9</button>
-        <button onClick={this.keyPressed("*")} id="multiple">*</button>
+        <button onClick={this.keyPressed("*")} id="multiply">*</button>
         <button onClick={this.keyPressed("4")} id="four">4</button>
         <button onClick={this.keyPressed("5")} id="five">5</button>
         <button onClick={this.keyPressed("6")} id="six">6</button>
