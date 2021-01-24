@@ -38,9 +38,13 @@ class Calculator extends React.Component {
 
     // Removes consecutive decimal point.
     if ("." === value) {
-
-      if ("." === this.state.value[location]) {
-        this.setState(state => ({value: state.value.slice(0, location)}));
+      for (let i=location; i>=0; i-- ){
+        if ("." === this.state.value[i]) {
+          value = "";
+        }
+        else if (OPERATORS.has(this.state.value[i])) {
+          break;
+        }
       }
     }
 
