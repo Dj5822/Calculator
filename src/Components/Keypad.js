@@ -32,4 +32,4 @@ class Keypad extends React.Component {
   }
 }
 
-export default KeyPad;
+export default Keypad;
