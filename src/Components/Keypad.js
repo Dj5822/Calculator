@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Style/Keypad.css';
 
-class KeyPad extends React.Component {
+class Keypad extends React.Component {
 
   keyPressed(value) {
     return () => this.props.onNumPress(value);
