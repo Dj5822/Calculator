@@ -22,8 +22,13 @@ class Calculator extends React.Component {
 
     // Removes previous operator when consecutive operators are entered.
     if (OPERATORS.has(value) && value !== "-") {
-      if (OPERATORS.has(this.state.value.slice(location))){
-        this.setState(state => ({value: state.value.slice(0, location)}));
+      for (let i=location; i>=0; i-- ){
+        if (OPERATORS.has(this.state.value[i])){
+          this.setState(state => ({value: state.value.slice(0, i)}));
+        }
+        else if (!OPERATORS.has(this.state.value[i])) {
+          break;
+        }
       }
     }
 
