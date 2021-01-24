@@ -25,7 +25,7 @@ class KeyPad extends React.Component {
         <button onClick={this.keyPressed("0")} id="zero">0</button>
         <button onClick={this.keyPressed("/")} id="divide">/</button>
         <button onClick={this.keyPressed(".")} id="decimal">.</button>
-        <button id="equals">=</button>
+        <button onClick={this.props.onEqualPress} id="equals">=</button>
         <button onClick={this.props.onClear} id="clear">C</button>
       </div>
     );

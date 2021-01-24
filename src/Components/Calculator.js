@@ -12,6 +12,7 @@ class Calculator extends React.Component {
       value: "0"
     }
     this.keypadPressed = this.keypadPressed.bind(this);
+    this.calculateResult = this.calculateResult.bind(this);
     this.clear = this.clear.bind(this);
   }
 
@@ -20,7 +21,7 @@ class Calculator extends React.Component {
     let location = this.state.value.length-1;
 
     // Removes previous operator when consecutive operators are entered.
-    if (OPERATORS.has(value)) {
+    if (OPERATORS.has(value) && value !== "-") {
       if (OPERATORS.has(this.state.value.slice(location))){
         this.setState(state => ({value: state.value.slice(0, location)}));
       }
@@ -51,6 +52,10 @@ class Calculator extends React.Component {
     }
   }
 
+  calculateResult() {
+    this.setState(state => ({value: eval(state.value).toString()}));
+  }
+
   clear() {
     this.setState({value: "0"});
   }
@@ -59,7 +64,7 @@ class Calculator extends React.Component {
     return (
       <div>
         <Display value={this.state.value} />
-        <Keypad onNumPress={this.keypadPressed} onClear={this.clear}/>
+        <Keypad onNumPress={this.keypadPressed} onEqualPress={this.calculateResult} onClear={this.clear}/>
       </div>
     );
   }
