@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto auto auto auto;
-  height: 500px;
-  width: 25%;
+
+  button {
+    height: 12vh;
+    font-size: calc(10px + 2vw);
+  }
 }

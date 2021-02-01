@@ -1,8 +1,5 @@
 #display {
   background-color: blue;
   color: white;
-  font-size: 70px;
-
-  width: 25%;
-  height: 100px;
+  font-size: calc(20px + 4vw);
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Display from './Display.js';
 import Keypad from './Keypad.js';
+import '../Style/Calculator.scss';
 
 const OPERATORS = new Set("+-*/");
 
@@ -72,9 +73,12 @@ class Calculator extends React.Component {
 
   render(){
     return (
-      <div>
-        <Display value={this.state.value} />
-        <Keypad onNumPress={this.keypadPressed} onEqualPress={this.calculateResult} onClear={this.clear}/>
+      <div id="background">
+        <div id="calculator">
+          <Display value={this.state.value} />
+          <Keypad onNumPress={this.keypadPressed} 
+          onEqualPress={this.calculateResult} onClear={this.clear}/>
+        </div>
       </div>
     );
   }
