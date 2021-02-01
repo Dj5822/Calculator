@@ -6,5 +6,17 @@
   button {
     height: 12vh;
     font-size: calc(10px + 2vw);
+    border-radius: 0;
+    border: none;
+    margin: 2px;
+    background-color: rgba(238, 238, 238, 0.6);
+  }
+
+  button:hover {
+    background-color: rgba(180, 180, 180, 0.7);
+  }
+
+  .numButton {
+    background-color: #efefef;
   }
 }

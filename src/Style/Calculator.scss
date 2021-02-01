@@ -4,10 +4,12 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
+    background-color: rgb(43, 110, 233);
 
     #calculator {
         width: 30vw;
-        height: 80vh;
+        height: 76vh;
+        background-color: rgba(160, 160, 160, 0.5);
+        padding: 3px;
     }   
 }
